@@ -9,6 +9,7 @@ app.use(morgan('dev'))
 app.use(express.json())
 dotevn.config()
 const PORT = process.env.PORT
+app.use("/api/v1/test",require('./routes/testRoutes'))
 app.get('/',(req,res)=>{
     console.log("this is first method i created ")
     res.send('<h1>this is my first route that i created</h1>')
